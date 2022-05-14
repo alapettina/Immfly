@@ -1,0 +1,25 @@
+Description:
+As a user, I want to sort the product list by choosing a characteristic and order so that I can be able to choose better following my sort criteria.
+
+Acceptance Criteria:
+- Given I am on the product list for the first time the page is sorted by position and has the descending order.
+- Given I am in the product list when I click with my mouse the “sort by” dropdown control I can see there are 4 options: Position, product name, price, and new arrivals.
+-  Given I am on the product list and I click on one of the sort options: Position, product name, price, and new arrivals, the list is sorted by the chosen option and the direction order.
+- Given I am in the product list and I click on the direction order, if the icon arrow is up ↑
+the list is sorted in descending order, if the icon arrow is down the list is sorted in ascending order.
+
+
+After choosing the type of sort the page does the sort automatically? Or does the user have to press some button?
+After choosing the sort, when the user waits for the correct order, the screen shows something in the meantime to the user to inform that the sort is in process?
+If some product is not in the stock disappear? Or maybe go always to the end of the list no matter the order? Or not matter that if is not in the stock the product respect the sort?
+
+
+-	The user changes the number of products per page and after doing a sort, the user has to see the number of products in the chosen order with the expected sort.
+-	The user selects some of the filters and later does a sort, the user has to see on expected order and only the products with the filter characteristics.
+-	The user chooses a different page and does a sort, the user has to stay on the selected page.
+-	The user do a sort and some elements are without stock
+-	Verify the user can access and select the sort options without the mouse
+-	Verify that if the user selects some accessibility adjustments the sort options are showing as expected.
+
+Check the time it takes to do the sort.
+Check the after the sort the elements have the expected attributes.
