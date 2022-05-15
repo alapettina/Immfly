@@ -1,7 +1,9 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -38,7 +40,13 @@ public class CommonMethods {
 
 
     public void waitElementDisappear(By element) {
-        new WebDriverWait(driver, 10).until(ExpectedConditions.invisibilityOfElementLocated(element));
+        new WebDriverWait(driver, 12).until(ExpectedConditions.invisibilityOfElementLocated(element));
+    }
+
+    public void waitUntilThePageLoaded() {
+        ExpectedCondition<Boolean> pageLoadCondition = driver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        wait.until(pageLoadCondition);
     }
 
 }

@@ -1,7 +1,9 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pages.SpeedbirdPage;
 
@@ -19,15 +21,24 @@ public class Steps {
         speedbirdPage.clickDeclineCookies();
     }
 
-    @When("the user do a sort choosing the option (.*)")
+    @When("^the user do a sort choosing the option (.*)")
     public void sort(String option) {
         speedbirdPage.selectSort(option);
     }
 
-    @When("the user change the order by (.*)")
+    @When("^the user change the order by (.*)")
     public void order(String option) {
         speedbirdPage.clickOrderArrow(option);
     }
 
+    @When("^the user select the filter (.*) and the option (.*)")
+    public void chooseFilter(String category, String option) {
+        speedbirdPage.getFilter(category, option);
+    }
+
+    @Then("^the user check the order of the elements is depending the sort price and order (.*)")
+    public void checkOrder(String orderBy) {
+        Assert.assertTrue("The list is nor roder by was expected", speedbirdPage.checkOrder(orderBy));
+    }
 
 }
