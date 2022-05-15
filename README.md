@@ -1,4 +1,4 @@
-# web
+# Immfly
 
 - You have the pages objects in the path src/main/java/pages
 Here are declared the elements of the page.
