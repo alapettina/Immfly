@@ -23,3 +23,6 @@ If some product is not in the stock disappear? Or maybe go always to the end of 
 
 Check the time it takes to do the sort.
 Check the after the sort the elements have the expected attributes.
+
+
+About the page, when the user do a filter all the page is load, I think the better solution should be if only loads the content of the items.
